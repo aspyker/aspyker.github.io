@@ -170,16 +170,22 @@
 		<h3>Big Data Tools</h3>
 		<img src="images/big-data.png" class="pull-left" alt="">
 		<div class="col-md-8">
-        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-        sem. Nulla consequat massa quis enim. Donec pede <a href="brokenlink">Aegisthus</a> justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-        a, venenatis vitae, justo. Nullam dictum felis eu pede mollis Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-        ullamcorper ultricies nisi. Nam eget dui. <a href="brokenlink">Inviso</a> Etiam rhoncus. Maecenas <a href="brokenlink">Genie</a> tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-        adipiscing sem neque sed ipsum. <a href="brokenlink">Pig Pen</a>Nam quam nunc, blandit vel, luctus <a href="brokenlink">Lipstick</a> pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-        Donec vitae sapien ut libero venenatis faucibus. Nullam <a href="brokenlink">S3mper</a> quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-        mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, <a href="brokenlink">Surus</a>augue velit cursus nunc.</p>
-        <p class="lead">Visit our <a href="#" data-toggle="modal" data-target="#clickBigDataLink">big data strategy page</a> to see
-        an overview of how these components fit together, where we are at, and where we are going</p>
+        <p class="lead">Data is a key enabler towards providing our Netflix customers with an exceptional service. Behind the scenes, we have a
+	rich ecosystem of (big) data technologies facilitating our algorithms and analytics. We use and contribute to broadly-adopted open source
+	technologies including Hadoop, Hive, Pig, Parquet, Presto, and Spark. In addition, we’ve developed and contributed some additional tools
+	and services, which have further elevated our data platform. Genie [linked] is a powerful, REST-based abstraction to our various data
+	processing frameworks, notably Hadoop. Inviso [linked] provides detailed insights into the performance of our Hadoop jobs and clusters.
+	Lipstick [linked] shows the workflow of Pig jobs in a clear, visual fashion. And Aegisthus [linked] enables the bulk abstraction of data
+	out of Cassandra for downstream analytic processing.</p>
         </div>
+	</div>
+
+	<div class="row">
+		<h3>Build and Delivery Tools</h3>
+		<img src="images/big-data.png" class="pull-left" alt="">
+		<div class="col-md-8">
+        <p class="lead">TODO</p>
+	</div>
 	</div>
 	
 	<div class="modal fade" id="clickBigDataLink">
@@ -196,18 +202,57 @@
 	    </div>
 	  </div>
 	</div>  
+
+	<div class="row">
+		<h3>Security Engineering</h3>
+		<img src="images/user-interface.png" class="pull-left" alt="">
+		<div class="col-md-8">
+        <p class="lead">
+	Security is an increasingly important area for organizations of all types and sizes, and Netflix is happy to contribute a variety of security tools and
+	solutions to the open source community. Our security-related open source efforts generally fall into one of two categories - operational tools and systems
+	to make security teams more efficient and effective when securing large and dynamic environments and security infrastructure components that provide
+	critical security services for modern distributed systems.</p>
+	<p class="lead">On the operational side, Security Monkey helps monitor and secure large AWS-based environments and Scumblr leverages Internet-wide
+	targeted searches to surface specific security issues for investigation. On the security infrastructure side, MSL is an extensible and flexible secure
+	messaging protocol that addresses a number of secure communications use cases and requirements.</p>
+        </div>
+	</div>
 	
 	<div class="row">
 		<h3>User Interface Engineering</h3>
 		<img src="images/user-interface.png" class="pull-left" alt="">
 		<div class="col-md-8">
-        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-        sem. Nulla consequat massa quis enim. Donec pede <a href="brokenlink">Falcor</a> justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-        a, venenatis vitae, justo. Nullam dictum felis eu pede mollis Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-        ullamcorper ultricies nisi. Nam eget dui. <a href="brokenlink">MSL</a> Etiam rhoncus. Maecenas <a href="brokenlink">Falcor Again</a> tempus, tellus eget
-        condimentum rhoncus, sem quam semper libero, sit amet</p>
-        <p class="lead">Visit our <a href="#" data-toggle="modal" data-target="#clickUILink">UI</a> and <a href="#" data-toggle="modal" data-target="#clickUILink">Falcor</a>
-        strategy pages to see an overview of how these components fit together, where we are at, and where we are going</p>
+        <p class="lead">
+       Every month, Netflix members around the world discover and watch more than two billion hours of movies and shows on their TV, mobile and desktop devices. Using modern UI
+       technologies, like Node.js, React and RxJS, our engineers build rich client applications that run across thousands of devices. We strive to create cinematic, immersive
+       experiences that delight our members, exhibit exceptional performance and work flawlessly. We’re continuously improving the product through data-driven A/B testing that
+       enables us to experiment with novel concepts and understand the value of every feature we ship.</p>
+        </div>
+	</div>
+
+	<div class="row">
+		<h3>Persistence Engineering</h3>
+		<img src="images/user-interface.png" class="pull-left" alt="">
+		<div class="col-md-8">
+        <p class="lead">
+	Handling over a trillion data operations per day requires an interesting mix of “off the shelf OSS” and in house projects. No single data technology can meet every
+	use case or satisfy every latency requirement. Our needs range from non-durable in-memory stores like Memcached and Redis, to searchable datastores such as Elastic
+	and durable must-never-go-down datastores like Cassandra and MySQL.</p>
+        <p class="lead">
+	Our Cloud usage and the scale at which we consume these technologies, has required us to build tools and services that enhance the datastores we use. We’ve created
+	the sidecars Raigad and Priam to help with the deployment, management and backup/recovery of our hundreds of Elastic and Cassandra clusters. We’ve created EVCache
+	and Dynomite to use Memcached and Redis at scale. We’ve developed the Astyanax and Dyno client libraries to better consume datastores in the Cloud. We’ve even
+	obfuscated and provided a unified REST API to heterogenous datastores with STAASH.</p>
+        <p class="lead">
+	Please visit the Persistence Engineering page for more information about these and other projects we have open-sourced.</p>
+        </div>
+	</div>
+
+	<div class="row">
+		<h3>Operationa Insight and Performance</h3>
+		<img src="images/user-interface.png" class="pull-left" alt="">
+		<div class="col-md-8">
+        <p class="lead">TODO</p>
         </div>
 	</div>
 	
