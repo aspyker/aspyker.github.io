@@ -1,5 +1,9 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
+a {
+  color: #44B8FF;
+}
+
 .masthead {
 background-color: #000000;
 -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
