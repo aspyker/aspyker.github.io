@@ -148,6 +148,49 @@
 
     <div class="col-sm-12">
 
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="images/front-icons/big-data.png" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading">Big Data</h2>
+          <h3>Tools and services to get the most out of your (big) data</h3>
+          <p class="lead">Data is invaluable in making Netflix such an exceptional service for our customers. Behind the scenes, we have a
+            rich ecosystem of (big) data technologies facilitating our algorithms and analytics. We use and contribute to broadly-adopted open
+            source technologies including Hadoop, Hive, Pig, Parquet, Presto, and Spark. In addition, we’ve developed and contributed some additional
+            tools and services, which have further elevated our data platform. <a href="https://github.com/Netflix/genie">Genie</a> is a powerful, REST-based abstraction to our various
+            data processing frameworks, notably Hadoop. <a href="https://github.com/Netflix/inviso">Inviso</a> provides detailed insights into the performance of our Hadoop jobs and
+            clusters. <a href="https://github.com/Netflix/lipstick">Lipstick</a> shows the workflow of Pig jobs in a clear, visual fashion. And
+            <a href="https://github.com/Netflix/aegisthus">Aegisthus</a> enables the bulk abstraction of data out of Cassandra for downstream analytic processing.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="images/front-icons/build-delivery.png" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading">Build and Delivery Tools</h2>
+          <h3>Taking code from desktop to the cloud</h3>
+          <p class="lead">Netflix has open sourced many of our Gradle plugins under the name <a href="http://nebula-plugins.github.io/">Nebula</a>. Nebula started off as
+            a set of strong opinions to make Gradle simple to use for our developers. But we quickly learned that we could use the same assumptions on our open source projects and
+            on other Gradle plugins to make them easy to build, test and deploy. By standardizing plugin development, we've lowered the barrier to generating
+            them, allowing us to keep our build modular and composable.</p>
+          <p class="lead">We require additional tools to take these builds from the developers' desks to AWS. There are tens of thousands of instances
+            running Netflix. Every one of these runs on top of an image created by our open source tool <a href="https://github.com/Netflix/aminator">Aminator</a>. Once packaged,
+            these AMIs are deployed to AWS using our cloud deployment and management tool, <a href="https://github.com/Netflix/asgard">Asgard</a>. Asgard is well recognized outside
+            of Netflix, and was even used by President Obama's team in the 2012 election.</p>
+          <p class="lead">We continue to innovate on these tools, and look forward to both internal and open source usage in the future.</p>
+          </p>
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
       <div class="row featurette">
         <div class="col-sm-4">
           <img class="featurette-image img-responsive center-block" src="images/front-icons/cloud-platform.png" alt="Generic placeholder image 1">
@@ -171,18 +214,46 @@
 
       <div class="row featurette">
         <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/front-icons/big-data.png" alt="Generic placeholder image 1">
-        </div>      
+          <img class="featurette-image img-responsive center-block" src="images/front-icons/data-persistence.png" alt="Generic placeholder image 1">
+        </div>
         <div class="col-sm-8">
-          <h2 class="featurette-heading">Big Data</h2>
-          <h3>Tools and services to get the most out of your (big) data</h3>
-          <p class="lead">Data is invaluable in making Netflix such an exceptional service for our customers. Behind the scenes, we have a
-            rich ecosystem of (big) data technologies facilitating our algorithms and analytics. We use and contribute to broadly-adopted open
-            source technologies including Hadoop, Hive, Pig, Parquet, Presto, and Spark. In addition, we’ve developed and contributed some additional
-            tools and services, which have further elevated our data platform. <a href="https://github.com/Netflix/genie">Genie</a> is a powerful, REST-based abstraction to our various
-            data processing frameworks, notably Hadoop. <a href="https://github.com/Netflix/inviso">Inviso</a> provides detailed insights into the performance of our Hadoop jobs and
-            clusters. <a href="https://github.com/Netflix/lipstick">Lipstick</a> shows the workflow of Pig jobs in a clear, visual fashion. And
-            <a href="https://github.com/Netflix/aegisthus">Aegisthus</a> enables the bulk abstraction of data out of Cassandra for downstream analytic processing.</p>
+          <h2 class="featurette-heading">Data Persistence</h2>
+          <h3>Storing and Server data in the Cloud.</h3>
+          <p class="lead">Handling over a trillion data operations per day requires an interesting mix of “off the shelf OSS” and in house projects. No single data
+            technology can meet every use case or satisfy every latency requirement. Our needs range from non-durable in-memory stores like Memcached and Redis,
+            to searchable datastores such as Elastic and durable must-never-go-down datastores like Cassandra and MySQL.</p>
+          <p class="lead">Our Cloud usage and the scale at which we consume these technologies, has required us to build tools and services that enhance the
+            datastores we use. We’ve created the sidecars Raigad and Priam to help with the deployment, management and backup/recovery of our hundreds of Elastic and
+            Cassandra clusters. We’ve created <a href="https://github.com/Netflix/EVCache">EVCache</a> and <a href="https://github.com/Netflix/dynomite">Dynomite</a> to use
+            Memcached and Redis at scale. We’ve developed the <a href="https://github.com/Netflix/astyanax">Astyanax</a> and <a href="https://github.com/Netflix/dyno">Dyno</a>
+            client libraries to better consume datastores in the Cloud. We’ve even obfuscated and provided a unified REST API to heterogenous datastores with
+            <a href="https://github.com/Netflix/staash">STAASH</a>.</p>
+          <p class="lead">Please visit the Persistence Engineering page for more information about these and other projects we have open-sourced.</p>
+          </p>
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="images/front-icons/insight-performance.png" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading">Insight, Reliability and Performance</h2>
+          <h3>Providing Actionable Insight at Massive Scale</h3>
+          <p class="lead">Telemetry and metrics play a critical role in the operations of any company, and at more than a billion metrics per minute flowing into
+            <a href="#">Atlasi</a>, our time-series telemetry platform, they play a critical role at Netflix.  However, Operational Insight is considered a
+            higher-order family of products at Netflix, including the ability to understand the current components of our cloud ecosystem via <a href="#">Edda</a>,
+            and the easy integration of Java application code with Atlas via the Spectator library.</p>
+          <p class="lead">Effective performance instrumentation allows engineers to drill quickly on a massive volume of metrics, making critical decisions quickly
+            and efficiently.  <a href="#">Vector</a> exposes high-resolution host-level metrics with minimal overhead.
+          <p class="lead">Outside of the operational domain, cost management and visibility into where our resources are used in the cloud is a multi-million question
+            to be answered; we've built <a href="#">Ice</a> as a way to expose ongoing cost and and cloud utilization trends to engineers so they can have a better
+            understanding of the footprint of their applications in our environment.</p>
+          </p>
+          </p>
         </div>
       </div>
 
@@ -225,77 +296,6 @@
           </p>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/front-icons/build-delivery.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading">Build and Delivery Tools</h2>
-          <h3>Taking code from desktop to the cloud</h3>
-          <p class="lead">Netflix has open sourced many of our Gradle plugins under the name <a href="http://nebula-plugins.github.io/">Nebula</a>. Nebula started off as
-            a set of strong opinions to make Gradle simple to use for our developers. But we quickly learned that we could use the same assumptions on our open source projects and
-            on other Gradle plugins to make them easy to build, test and deploy. By standardizing plugin development, we've lowered the barrier to generating
-            them, allowing us to keep our build modular and composable.</p>
-          <p class="lead">We require additional tools to take these builds from the developers' desks to AWS. There are tens of thousands of instances
-            running Netflix. Every one of these runs on top of an image created by our open source tool <a href="https://github.com/Netflix/aminator">Aminator</a>. Once packaged,
-            these AMIs are deployed to AWS using our cloud deployment and management tool, <a href="https://github.com/Netflix/asgard">Asgard</a>. Asgard is well recognized outside
-            of Netflix, and was even used by President Obama's team in the 2012 election.</p>
-          <p class="lead">We continue to innovate on these tools, and look forward to both internal and open source usage in the future.</p>
-          </p>
-          </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/front-icons/data-persistence.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading">Data Persistence</h2>
-          <h3>Storing and Server data in the Cloud.</h3>
-          <p class="lead">Handling over a trillion data operations per day requires an interesting mix of “off the shelf OSS” and in house projects. No single data
-            technology can meet every use case or satisfy every latency requirement. Our needs range from non-durable in-memory stores like Memcached and Redis,
-            to searchable datastores such as Elastic and durable must-never-go-down datastores like Cassandra and MySQL.</p>
-          <p class="lead">Our Cloud usage and the scale at which we consume these technologies, has required us to build tools and services that enhance the
-            datastores we use. We’ve created the sidecars Raigad and Priam to help with the deployment, management and backup/recovery of our hundreds of Elastic and
-            Cassandra clusters. We’ve created <a href="https://github.com/Netflix/EVCache">EVCache</a> and <a href="https://github.com/Netflix/dynomite">Dynomite</a> to use
-            Memcached and Redis at scale. We’ve developed the <a href="https://github.com/Netflix/astyanax">Astyanax</a> and <a href="https://github.com/Netflix/dyno">Dyno</a>
-            client libraries to better consume datastores in the Cloud. We’ve even obfuscated and provided a unified REST API to heterogenous datastores with
-            <a href="https://github.com/Netflix/staash">STAASH</a>.</p>
-          <p class="lead">Please visit the Persistence Engineering page for more information about these and other projects we have open-sourced.</p>
-          </p>
-          </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/front-icons/insight-performance.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading">Insight, Reliability and Performance</h2>
-          <h3>Providing Actionable Insight at Massive Scale</h3>
-          <p class="lead">Telemetry and metrics play a critical role in the operations of any company, and at more than a billion metrics per minute flowing into
-            <a href="#">Atlasi</a>, our time-series telemetry platform, they play a critical role at Netflix.  However, Operational Insight is considered a
-            higher-order family of products at Netflix, including the ability to understand the current components of our cloud ecosystem via <a href="#">Edda</a>,
-            and the easy integration of Java application code with Atlas via the Spectator library.</p>
-          <p class="lead">Effective performance instrumentation allows engineers to drill quickly on a massive volume of metrics, making critical decisions quickly
-            and efficiently.  <a href="#">Vector</a> exposes high-resolution host-level metrics with minimal overhead.  
-          <p class="lead">Outside of the operational domain, cost management and visibility into where our resources are used in the cloud is a multi-million question
-            to be answered; we've built <a href="#">Ice</a> as a way to expose ongoing cost and and cloud utilization trends to engineers so they can have a better
-            understanding of the footprint of their applications in our environment.</p>
-          </p>
-          </p>
-        </div>
-      </div>
-
 
     </div>
     <!-- /END THE FEATURETTES -->
