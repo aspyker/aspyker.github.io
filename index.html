@@ -201,12 +201,14 @@
           <p class="lead">The cloud platform is the foundation and technology stack for the majority of the services within Netflix. The cloud platform consists
             of cloud services, application libraries and application containers. Specifically, the platform provides service discovery through
             <a href="https://github.com/Netflix/eureka">Eureka</a>, distributed configuration through <a href="https://github.com/Netflix/archaius">Archaius</a>,
-            resilent and intelligent inter-process and service communication through <a href="https://github.com/Netflix/ribbon">Ribbon</a>. The previous libraries and
-            services can be used with any JVM based container. To help with consumption, the platform additionally provides JVM container services through
+            resilent and intelligent inter-process and service communication through <a href="https://github.com/Netflix/ribbon">Ribbon</a>.  To provide reliability
+            beyond single service calls, <a href="http://github.com/Netflix/hystrix">Hystrix</a> is provided to isolate latency and fault tolerance at runtime. The previous
+            libraries and services can be used with any JVM based container. To help with consumption, the platform additionally provides JVM container services through
             <a href="https://github.com/Netflix/karyon">Karyon</a> and <a href="https://github.com/Netflix/governator">Governator</a> and support for non-JVM runtimes
-            via the <a href="https://github.com/Netflix/prana">Prana</a> sidecar. Miscellaneous libraries that are part of the cloud platform include logging through
-            <a href="https://github.com/Netflix/blitz4j">Blitz4J</a>, and .... Finally, in order to show how a JVM based Karyon application can be constructed, we provide
-            the <a href="https://github.com/Netflix/recipes-rss">Recipes-RSS sample.</a></p>
+            via the <a href="https://github.com/Netflix/prana">Prana</a> sidecar.  While Prana provides proxy capabilities within an instance,
+            <a href="https://github.com/Netflix/zuul">Zuul</a> (which integrates Hystrix, Eureka, and Ribbon as part of it's IPC capabilities) provides dyamically
+            scriptable proxying at the edge of the cloud deployment. Finally, in order to show how a JVM based Karyon application can be constructed, we
+            provide the <a href="https://github.com/Netflix/recipes-rss">Recipes-RSS sample.</a></p>
         </div>
       </div>
 
@@ -252,6 +254,8 @@
           <p class="lead">Outside of the operational domain, cost management and visibility into where our resources are used in the cloud is a multi-million question
             to be answered; we've built <a href="#">Ice</a> as a way to expose ongoing cost and and cloud utilization trends to engineers so they can have a better
             understanding of the footprint of their applications in our environment.</p>
+          <p class="lead">Finally to validate reliability, we have the <a href="https://github.com/Netflix/SimianArmy">Simian Army</a> which tests our instances
+            for random failures.</p>
           </p>
           </p>
         </div>
