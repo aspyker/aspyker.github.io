@@ -57,9 +57,12 @@
                 <h3>Industry Awards!</h3>
                 <hr/>
                 <p>Netflix is honored to receive the Jury's choice award for Innovation at
-                  <a href="http://jaxenter.com/jax-awards-winners-announced-at-jax-2015-conference-116358.html">JAX 2015 conference</a>.  We would like to
-                  thank all of those who contribute to the Netflix open source community including our Netflix developers, all external contributors,
+                  <a href="http://jaxenter.com/jax-awards-winners-announced-at-jax-2015-conference-116358.html">JAX 2015 conference</a>.<p>
+                <p>We would like to thank all of those who contribute to the Netflix open source community including our Netflix developers, all external contributors,
                   and our active user base.</p>
+                <p>Netflix Open Source won the JAX Special Jury Award.  Jury member Neal Ford was quoted as saying "that architecture is
+                  cool again, that it can be used as a business differentiator, and when done right it is a huge advantage. Netflix showed the power of internalizing
+                  DevOps into their architecture; all architectures will do this in the future.</p>
               </div>
               <div class="col-md-4">
                 <div class="carousel-image">
@@ -77,9 +80,13 @@
                 <h2>Getting Started</h2>
                 <h3>How can you get started quickly?</h3>
                 <hr/>
-                <p>To begin, we recommend working with our RSS Reader application. See this walkthrough on Answers For AWS to get up and running quickly.</p>
-                <p>For the simple approach, try out our ZeroToDocker container images. After downloading the images, you can be up and running NetflixOSS in just a few minutes.</p>
-                <p>After you've tackled that, check out the IBM ACME Air and Flux Capacitor apps, and the Zero-to-Cloud workshop.</p>
+                <p>For the simple approach, try out our <a href="http://techblog.netflix.com/2014/11/zerotodocker-easy-way-to-evaluate.html">ZeroToDocker</a>
+                  container images. After downloading the images, you can be up and running NetflixOSS in just a few minutes.</p>
+                <p>After you've tackled that, check out the <a href="https://github.com/aspyker/acmeair-netflix">IBM ACME Air</a>
+                  and <a href="https://github.com/cfregly/fluxcapacitor/wiki">Flux Capacitor</a> apps, and the
+                  <a href="https://github.com/Netflix-Skunkworks/zerotocloud">Zero-to-Cloud workshop.</a></p>
+                <p>See these <a href="http://answersforaws.com/resources/netflixoss/cloudformation/">CloudFormation templates</a>
+                  on Answers For AWS for use of NetflixOSS through CloudFormation.</p>
               </div>
               <div class="col-md-4">
                 <div class="carousel-image">
@@ -175,7 +182,7 @@
         <div class="col-sm-8">
           <h2 class="featurette-heading">Build and Delivery Tools</h2>
           <h3>Taking code from desktop to the cloud</h3>
-          <p class="lead">Netflix has open sourced many of our Gradle plugins under the name <a href="http://nebula-plugins.github.io/">Nebula</a>. Nebula started off as
+          <p class="lead">Netflix has open sourced many of our Gradle plugins under the name <a href="https://nebula-plugins.github.io/">Nebula</a>. Nebula started off as
             a set of strong opinions to make Gradle simple to use for our developers. But we quickly learned that we could use the same assumptions on our open source projects and
             on other Gradle plugins to make them easy to build, test and deploy. By standardizing plugin development, we've lowered the barrier to generating
             them, allowing us to keep our build modular and composable.</p>
@@ -202,13 +209,12 @@
             of cloud services, application libraries and application containers. Specifically, the platform provides service discovery through
             <a href="https://github.com/Netflix/eureka">Eureka</a>, distributed configuration through <a href="https://github.com/Netflix/archaius">Archaius</a>,
             resilent and intelligent inter-process and service communication through <a href="https://github.com/Netflix/ribbon">Ribbon</a>.  To provide reliability
-            beyond single service calls, <a href="http://github.com/Netflix/hystrix">Hystrix</a> is provided to isolate latency and fault tolerance at runtime. The previous
+            beyond single service calls, <a href="https://github.com/Netflix/hystrix">Hystrix</a> is provided to isolate latency and fault tolerance at runtime. The previous
             libraries and services can be used with any JVM based container. To help with consumption, the platform additionally provides JVM container services through
             <a href="https://github.com/Netflix/karyon">Karyon</a> and <a href="https://github.com/Netflix/governator">Governator</a> and support for non-JVM runtimes
             via the <a href="https://github.com/Netflix/prana">Prana</a> sidecar.  While Prana provides proxy capabilities within an instance,
             <a href="https://github.com/Netflix/zuul">Zuul</a> (which integrates Hystrix, Eureka, and Ribbon as part of it's IPC capabilities) provides dyamically
-            scriptable proxying at the edge of the cloud deployment. Finally, in order to show how a JVM based Karyon application can be constructed, we
-            provide the <a href="https://github.com/Netflix/recipes-rss">Recipes-RSS sample.</a></p>
+            scriptable proxying at the edge of the cloud deployment.</p>
         </div>
       </div>
 
@@ -227,9 +233,8 @@
           <p class="lead">Our Cloud usage and the scale at which we consume these technologies, has required us to build tools and services that enhance the
             datastores we use. We’ve created the sidecars Raigad and Priam to help with the deployment, management and backup/recovery of our hundreds of Elastic and
             Cassandra clusters. We’ve created <a href="https://github.com/Netflix/EVCache">EVCache</a> and <a href="https://github.com/Netflix/dynomite">Dynomite</a> to use
-            Memcached and Redis at scale. We’ve developed the <a href="https://github.com/Netflix/astyanax">Astyanax</a> and <a href="https://github.com/Netflix/dyno">Dyno</a>
-            client libraries to better consume datastores in the Cloud. We’ve even obfuscated and provided a unified REST API to heterogenous datastores with
-            <a href="https://github.com/Netflix/staash">STAASH</a>.</p>
+            Memcached and Redis at scale. We’ve even developed the <a href="https://github.com/Netflix/astyanax">Astyanax</a> and <a href="https://github.com/Netflix/dyno">Dyno</a>
+            client libraries to better consume datastores in the Cloud.</p>
           <p class="lead">Please visit the Persistence Engineering page for more information about these and other projects we have open-sourced.</p>
           </p>
           </p>
@@ -246,14 +251,14 @@
           <h2 class="featurette-heading">Insight, Reliability and Performance</h2>
           <h3>Providing Actionable Insight at Massive Scale</h3>
           <p class="lead">Telemetry and metrics play a critical role in the operations of any company, and at more than a billion metrics per minute flowing into
-            <a href="#">Atlasi</a>, our time-series telemetry platform, they play a critical role at Netflix.  However, Operational Insight is considered a
-            higher-order family of products at Netflix, including the ability to understand the current components of our cloud ecosystem via <a href="#">Edda</a>,
-            and the easy integration of Java application code with Atlas via the Spectator library.</p>
+            <a href="https://github.com/Netflix/atlas">Atlas</a>, our time-series telemetry platform, they play a critical role at Netflix.  However, Operational
+            Insight is considered a higher-order family of products at Netflix, including the ability to understand the current components of our cloud ecosystem
+            via <a href="https://github.com/Netflix/edda">Edda</a>, and the easy integration of Java application code with Atlas via the Spectator library.</p>
           <p class="lead">Effective performance instrumentation allows engineers to drill quickly on a massive volume of metrics, making critical decisions quickly
-            and efficiently.  <a href="#">Vector</a> exposes high-resolution host-level metrics with minimal overhead.
+            and efficiently.  <a href="https://github.com/Netflix/vector">Vector</a> exposes high-resolution host-level metrics with minimal overhead.
           <p class="lead">Outside of the operational domain, cost management and visibility into where our resources are used in the cloud is a multi-million question
-            to be answered; we've built <a href="#">Ice</a> as a way to expose ongoing cost and and cloud utilization trends to engineers so they can have a better
-            understanding of the footprint of their applications in our environment.</p>
+            to be answered; we've built <a href="https://github.com/Netflix/ice">Ice</a> as a way to expose ongoing cost and and cloud utilization trends to
+            engineers so they can have a better understanding of the footprint of their applications in our environment.</p>
           <p class="lead">Finally to validate reliability, we have the <a href="https://github.com/Netflix/SimianArmy">Simian Army</a> which tests our instances
             for random failures.</p>
           </p>
@@ -282,6 +287,7 @@
         </div>
       </div>
 
+      <!--
       <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -300,6 +306,7 @@
           </p>
         </div>
       </div>
+      -->
 
     </div>
     <!-- /END THE FEATURETTES -->
@@ -343,7 +350,7 @@
           <div class="col-md-4">
             <p class="footer-sub"><strong>Open Source</strong></p>
             <ul>
-              <li><a href="http://www.github.com/netflix" target="_blank">NETFLIX OPEN SOURCE</a></li>
+              <li><a href="https://www.github.com/netflix" target="_blank">NETFLIX OPEN SOURCE</a></li>
               <li><a href="https://jobs.netflix.com/" target="_blank">GET IN ON THE FUN: JOIN US!</a></li>
             </ul>
           </div>
